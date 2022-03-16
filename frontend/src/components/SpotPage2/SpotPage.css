@@ -1,0 +1,31 @@
+.spot-page-container2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.spot-page-left{
+  width: 700px;
+  height:800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y:scroll;
+}
+
+.spot-page-right {
+  color: white;
+}
+.spot-image-single{
+  width: 650px;
+  margin-top:10px;
+  border-radius: .5em;
+}
