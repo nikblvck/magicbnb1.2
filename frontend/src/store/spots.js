@@ -140,9 +140,7 @@ const spotsReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD:
       newState = { ...state };
-      action.spots.forEach((spot) => {
-        newState[spot.id] = spot;
-      });
+      newState.spots = action.spots; 
       return newState;
 
     case LOAD_ONE:

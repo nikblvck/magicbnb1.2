@@ -28,7 +28,7 @@ function EditSpot() {
     dispatch(getOneSpot(spotId)).then(() => setIsLoaded(true));
   }, [dispatch, spotId]);
 
- if (!sessionUser) return <Redirect to="/login" />;
+ 
   const handleEdit = async function(e){
     e.preventDefault();
 

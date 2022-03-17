@@ -1,22 +1,62 @@
-.splashContainer{
-  padding-top: 20px;
-  margin: 50px auto auto auto;
-  background-color:rgba(255, 255, 255, 0.35);
-  justify-content: center;
-  border-radius: 32px;
-  max-width: 1200px;
+.background-color {
+  background-color: black;
+  box-sizing: border-box;
+  padding: 50px;
+}
 
-  flex-direction: row;
-}
-.splashContent {
-  margin-top: -70px;
-}
 .hero-image{
-  margin: 70px auto auto auto;
-  background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('https://res.cloudinary.com/blvckmagic/image/upload/v1639350427/magicbnb/image_lbez73.jpg');
-  background-size: contain;
+  background-image: url('https://res.cloudinary.com/blvckmagic/image/upload/v1647535970/magicbnb/magicbnbsplash_ufs6pv.png');
+  background-size: fill;
   background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: overlay;
-  width: 10%;
+  max-width: 100%;
+  min-height: 400px;
+  max-height: 600px;
+  border-radius: .85rem;
+  margin: auto;
+
+}
+
+.hero-text-container{
+  padding-top: 300px;
+}
+
+.hero-text {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+.splash-cities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.city-card {
+  height: 350px;
+  width: 300px;
+  background-color: #f5f5f5;
+  border: 1px solid #6e6e6e;
+  border-radius: .4em;
+}
+.splash-city-image{
+  height: 200px;
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    width: 100%;
+  }
+  .hero-text-container{
+    padding-top: 300px;
+  }
+
+  .background-color{
+    width: 100%;
+    margin: 0 !important;
+  }
+
 }
