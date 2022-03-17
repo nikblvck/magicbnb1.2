@@ -22,6 +22,7 @@ function HomePage2() {
   };
 
 
+
   return (
 		<>
 			<div className="home-container">
