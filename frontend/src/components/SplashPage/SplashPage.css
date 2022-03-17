@@ -35,15 +35,23 @@
 }
 
 .city-card {
-  height: 350px;
+  height: 300px;
   width: 300px;
-  background-color: #f5f5f5;
-  border: 1px solid #6e6e6e;
-  border-radius: .4em;
+  border-radius: .85em;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+
 }
 .splash-city-image{
   height: 200px;
   width: 300px;
+}
+.city-card-cname{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: .25em;
 }
 
 @media screen and (max-width: 768px) {
