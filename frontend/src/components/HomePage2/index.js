@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory, Link} from "react-router-dom";
 import { getSpots, deleteSpot } from "../../store/spots";
 import './Home.css'
 
@@ -34,17 +34,20 @@ function HomePage2() {
 						<>
 							<div className="spot-card">
 								<div className="spot-image-container">
+									<Link to={`/spots/${spot.id}`}>
 									<img
 										className="spot-image"
 										src={spot?.Images[0]?.url}
 										alt="spot"
 									/>
+									</Link>
 								</div>
 								{user?.id !== spot?.userId ? null : (
 									<>
 										<div className="user-button-container">
-											<button>Edit</button>
+											<button className="user-btn">Edit</button>
 											<button
+											  className="user-btn"
 												id={spot?.id}
 												onClick={(e) => handleDelete(e.target.id)}
 											>
@@ -53,12 +56,16 @@ function HomePage2() {
 										</div>
 									</>
 								)}
+								<div className="spot-info-container">
+									<div className="spot-info-name">
+										<h2>{spot?.name}</h2>
+										</div>
 								<div className="spot-location">
 									{spot?.city}, {spot?.state}
 								</div>
 								<div className="spot-info">
-									{spot?.name}
-									<br />${spot?.price} /night
+								${spot?.price} /night
+								</div>
 								</div>
 							</div>
 						</>

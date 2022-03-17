@@ -42,7 +42,7 @@ function SplashPage() {
 				<div className="splash-cities">
 					{cities.map(city => (
 						<div className="city-card" key={city.name}>
-						<NavLink to={`/spots/${city.name}`}>
+						<NavLink to={`/spots/view/${city.name}`}>
 							<div className="splash-city">
 								<h2 className="city-card-cname">{city.name}</h2>
 								<img className="splash-city-image" src={city.image} alt={city.name} />

@@ -37,7 +37,7 @@ function App() {
 				<Route exact path="/signup">
 					<SignupFormPage />
 				</Route>
-				<Route exact path="/spots/:city">
+				<Route exact path="/spots/view/:city">
 					<CityPage />
 				</Route>
 				<Route exact path="/spots/:spotId">
