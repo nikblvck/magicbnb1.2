@@ -25,22 +25,22 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className="navContainer">
-      <div className="navLeft">
-        <ul>
-          <li>
-            <NavLink exact to="/spots">
-              HOME
+      <div className="navLeftContainer">
+        <div className="navLeft">
+          <div>
+            <NavLink className="nav-link" exact to="/spots">
+              Home
             </NavLink>
-          </li>
-          <li>
-            <a href="https://www.github.com/nikblvck/magicbnb">ABOUT</a>
-          </li>
-        </ul>
+          </div>
+          <div>
+            <a className="nav-link" href="https://www.github.com/nikblvck/magicbnb">About</a>
+          </div>
+        </div>
       </div>
       <div className="navRight">
-        <ul>
-          <li>{sessionLinks}</li>
-        </ul>
+        <div>
+          <div>{sessionLinks}</div>
+        </div>
       </div>
     </div>
   );

@@ -6,9 +6,10 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import SplashPage from "./components/SplashPage";
 import Navigation from "./components/Navigation";
-import Homepage from "./components/HomePage";
+import Homepage from "./components/HomePage2";
 import SpotPage2 from "./components/SpotPage2";
 import EditSpot from "./components/EditSpotForm";
+import CityPage from "./components/CityPage";
 import CreateSpot from "./components/CreateSpotForm";
 // import SpotPage from "./components/SpotsPage";
 
@@ -21,33 +22,37 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
-      <Navigation isLoaded={isLoaded} />
-        <Switch>
-          <Route exact path="/">
-            <SplashPage/>
-          </Route>
-          <Route exact path="/spots">
-            <Homepage />
-          </Route>
-          <Route exact path="/login">
-            <LoginFormPage />
-          </Route>
-          <Route exact path="/signup">
-            <SignupFormPage />
-          </Route>
-          <Route exact path="/spots/:spotId">
-            <SpotPage2/>
-          </Route>
-          <Route  path="/spots/:spotId/edit">
-            <EditSpot/>
-          </Route>
-          <Route path="/create">
-            <CreateSpot />
-          </Route>
-        </Switch>
-    </>
-  );
+		<>
+			<Navigation isLoaded={isLoaded} />
+			<Switch>
+				<Route exact path="/">
+					<SplashPage />
+				</Route>
+				<Route exact path="/spots">
+					<Homepage />
+				</Route>
+				<Route exact path="/login">
+					<LoginFormPage />
+				</Route>
+				<Route exact path="/signup">
+					<SignupFormPage />
+				</Route>
+				<Route exact path="/spots/view/:city">
+					<CityPage />
+				</Route>
+				<Route exact path="/spots/:spotId">
+					<SpotPage2 />
+				</Route>
+				<Route path="/spots/:spotId/edit">
+					<EditSpot />
+				</Route>
+
+				<Route path="/create">
+					<CreateSpot />
+				</Route>
+			</Switch>
+		</>
+	);
 }
 
 export default App;

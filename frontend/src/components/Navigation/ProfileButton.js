@@ -39,32 +39,32 @@ function ProfileButton({ user }) {
   }
 
   return (
-    <>
-      <ul className="navButtons">
-        <li>
-        <button onClick={openMenu}>
-          <i classNames="fas fa-hat-wizard" />
-        </button>
-        </li>
-        <li>
-        <button onClick={handleClickToCreate}>
-          <i className="fas fa-magic" />
-        </button>
-        </li>
-      </ul>
-      {showMenu && (
-        <ul className="profile-dropdown">
-          <li>Welcome, {user.firstName}!</li>
-          <br />
-          <li>{user.email}</li>
-          <br />
-          <li>
-            <button onClick={logout}>Log Out</button>
-          </li>
-        </ul>
-      )}
-    </>
-  );
+		<>
+			<ul className="navButtons">
+				<li>
+					<button onClick={openMenu}>
+						<i class="fa-solid fa-user"></i>
+					</button>
+				</li>
+				<li>
+					<button onClick={handleClickToCreate}>
+						<i class="fa-solid fa-wand-sparkles"></i>
+					</button>
+				</li>
+			</ul>
+			{showMenu && (
+				<ul className="profile-dropdown">
+					<li>Welcome, {user.firstName}!</li>
+					<br />
+					<li>{user.email}</li>
+					<br />
+					<li>
+						<button onClick={logout}>Log Out</button>
+					</li>
+				</ul>
+			)}
+		</>
+	);
 }
 
 export default ProfileButton;

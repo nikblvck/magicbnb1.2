@@ -51,6 +51,22 @@ router.get(
   })
 );
 
+//get spots by city
+router.get(
+  "/city/:city",
+  asyncHandler(async (req, res) => {
+    const city = req.params.city;
+    const spots = await Spot.findAll({
+      where: {
+        city,
+      },
+      include: [Image, Review],
+    });
+    return res.json({ spots });
+  })
+);
+
+
 //create spot
 router.post(
   "/",
