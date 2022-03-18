@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useHistory, Link} from "react-router-dom";
+import { useHistory, Link} from "react-router-dom";
 import { getSpots, deleteSpot } from "../../store/spots";
+
 import './Home.css'
 
 function HomePage2() {
@@ -10,6 +11,7 @@ function HomePage2() {
   const history = useHistory();
   const user = useSelector((state) => state?.session?.user)
   const spots = useSelector((state) => state?.spots?.spots)
+	const [showEdit, setShowEdit] = useState(false)
 
   console.log(spots)
   useEffect(() => {

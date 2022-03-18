@@ -6,7 +6,7 @@ module.exports = {
       "Spots",
       [
         {
-          name: "Private 4 Bedroom House On Lake Washington",
+          name: "Private 4 Bedroom",
           userId: 1,
           address: "446 Seward Park Lane ",
           city: "Seattle",
@@ -32,7 +32,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          name: "Luxury Home | Commencement Bay",
+          name: "Commemncement Bay Home",
           userId: 5,
           address: "798 Ruston Way",
           city: "Tacoma",
